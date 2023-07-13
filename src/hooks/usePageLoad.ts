@@ -10,5 +10,5 @@ export function usePageLoad(onPageLoad: () => unknown): void {
 
 			return () => window.removeEventListener("load", onPageLoad)
 		}
-	})
+	}, [])
 }

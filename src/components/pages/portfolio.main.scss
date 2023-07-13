@@ -2,7 +2,7 @@
 	background-color: white;
 	height: 100vh;
 	position: relative;
-	transition: background-color 1.5s ease-in-out 1.0s;
+	transition: background-color 1.5s ease-in-out 0.25s;
 	width: 100vw;
 
 	&.loaded {
@@ -19,7 +19,7 @@
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		transition: opacity 1.5s ease-in 3.0s;
+		transition: opacity 1.5s ease-in 2.0s;
 		width: 100%;
 		z-index: 0;
 
