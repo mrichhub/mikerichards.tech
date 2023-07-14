@@ -22,11 +22,10 @@ export function PortfolioMainPage() {
 	)
 
 	const typewriterStages: TypewriterStage[] = [
-		{ text: "Hi 👋", delay: 4000, duration: 3000, },
+		{ text: "Hi 👋", delay: 3500, duration: 2500 },
 		{ text: "", speed: 30, duration: 250, },
-		{ text: "I'm Mike Richards", duration: 3000, },
-		{ text: "", speed: 30, duration: 250, },
-		{ text: "Welcome to my portfolio!" },
+		{ text: "I'm Mike Richards.", duration: 1500, },
+		{ text: "I'm Mike Richards.\nWelcome to my portfolio!" },
 	]
 
 	return (

@@ -2,7 +2,7 @@
 	background-color: white;
 	height: 100vh;
 	position: relative;
-	transition: background-color 1.5s ease-in-out 0.25s;
+	transition: background-color 1.25s ease-in-out 0.25s;
 	width: 100vw;
 
 	&.loaded {
@@ -19,7 +19,7 @@
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		transition: opacity 0.75s ease-in 2.0s;
+		transition: opacity 1s ease-in-out 1.75s;
 		width: 100%;
 		z-index: 0;
 
@@ -34,10 +34,11 @@
 	}
 
 	.typewriter-container {
+		font-size: 24px;
 		left: 50%;
 		position: absolute;
-		top: 20%;
-		transform: translate(-50%, 0);
+		top: 50%;
+		transform: translate(-50%, -200px);
 		width: 100%;
 	}
 }

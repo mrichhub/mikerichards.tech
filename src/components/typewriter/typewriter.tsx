@@ -37,7 +37,10 @@ export function Typewriter(props: TypewriterProps) {
 		else {
 			if (currentText.length > 0) {
 				const timer = setTimeout(() => {
-					setCurrentText(prevText => prevText.substring(0, prevText.length - 1))
+					setCurrentText(prevText => {
+						const prevTextArray = [...prevText] // Must be like this to handle emojis
+ 						return prevTextArray.slice(0, prevTextArray.length - 1).join("").substring(0, prevText.length - 1)
+					})
 				}, Random.int(speedMin, speedMax))
 
 				return () => clearTimeout(timer)
@@ -49,7 +52,7 @@ export function Typewriter(props: TypewriterProps) {
 	}, [props.text, currentText])
 
 	return (
-		<div className="typewriter">
+		<div className="typewriter display-linebreaks">
 			{currentText}
 		</div>
 	)
