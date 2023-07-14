@@ -1,12 +1,12 @@
-.portfolio {
+.intro {
 	background-color: white;
 	height: 100svh;
 	position: relative;
-	transition: background-color 0.75s ease-in-out 0.25s;
 	width: 100vw;
 
 	&.loaded {
 		background-color: var(--background-color);
+		transition: background-color 0.75s ease-in-out 0.25s;
 	}
 
 	.avatar {
@@ -16,24 +16,17 @@
 		position: absolute;
 		top: 100%;
 		transform: translate(-40%, 0);
-		transition: transform 1.75s ease-in-out 0.75s;
 		z-index: 0;
 
 		&.show {
 			transform: translate(-40%, -100%);
+			transition: transform 1.75s ease-in-out 0.75s;
 		}
 
 		&.disappear {
 			opacity: 0;
-			transition: transform 1.5s ease-in, opacity 1.5s ease-in;
+			transition: transform 1.5s ease-in, opacity 1.0s ease-in;
 			transform: translate(-40%, 0)
-		}
-
-		&.move-to-bottom-left {
-			left: 0;
-			max-height: 100px;
-			transform: translate(0, -100%);
-			transition: transform 3s ease-in-out, left 3s ease-in-out, max-height 3s ease-in-out;
 		}
 	}
 

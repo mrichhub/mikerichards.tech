@@ -3,12 +3,13 @@ import { useEffect } from "react"
 export function usePageLoad(onPageLoad: () => unknown): void {
 	useEffect(() => {
 		if (document.readyState === "complete") {
-			onPageLoad()
+			const timer = setTimeout(() => onPageLoad(), 5)
+			
+			return () => clearTimeout(timer)
 		}
-		else {
-			window.addEventListener("load", onPageLoad, false)
 
-			return () => window.removeEventListener("load", onPageLoad)
-		}
+		window.addEventListener("load", onPageLoad, false)
+
+		return () => window.removeEventListener("load", onPageLoad)
 	}, [])
 }

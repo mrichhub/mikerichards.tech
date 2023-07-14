@@ -1,10 +1,12 @@
 import classNames from "classnames"
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import lightbulbImage from "../../assets/images/lightbulb3.jpg"
 import avatarImage from "../../assets/images/mike-richards-avatar.png"
+import { localData } from "../../data/localData"
 import { useIsPageLoaded } from "../../hooks/useIsPageLoaded"
 import { TypewriterStage, TypewriterStages } from "../typewriter/typewriterStages"
-import "./portfolio.main.scss"
+import "./intro.scss"
 
 const introTypewriterStages: TypewriterStage[] = [
 	{ text: "Hi 👋", delay: 2750, duration: 1500 },
@@ -14,24 +16,24 @@ const introTypewriterStages: TypewriterStage[] = [
 	{ text: "", speed: 10, },
 ]
 
-export function PortfolioMainPage() {
+export default function IntroPage() {
 	const isPageLoaded = useIsPageLoaded()
 	const [showLightbulb, setShowLightbulb] = useState(false)
 	const [displayMainPortfolio, setDisplayMainPortfolio] = useState(false)
+	const navigate = useNavigate()
+
+	const introClassName = classNames(
+		"intro",
+		{
+			loaded: isPageLoaded,
+		},
+	)
 
 	const avatarClassName = classNames(
 		"avatar",
 		{
 			disappear: displayMainPortfolio,
 			show: isPageLoaded,
-			// "move-to-bottom-left": displayMainPortfolio,
-		},
-	)
-
-	const portfolioClassName = classNames(
-		"portfolio",
-		{
-			loaded: isPageLoaded,
 		},
 	)
 
@@ -44,6 +46,10 @@ export function PortfolioMainPage() {
 	)
 
 	useEffect(() => {
+		localData.didViewIntro = true
+	}, [])
+
+	useEffect(() => {
 		if (showLightbulb) {
 			const timer = setTimeout(() => {
 				setDisplayMainPortfolio(true)
@@ -53,12 +59,22 @@ export function PortfolioMainPage() {
 		}
 	}, [showLightbulb])
 
+	useEffect(() => {
+		if (displayMainPortfolio) {
+			const timer = setTimeout(() => {
+				navigate("/portfolio")
+			}, 4000)
+
+			return () => clearTimeout(timer)
+		}
+	}, [displayMainPortfolio])
+
 	function onTypewriterFinished() {
 		setShowLightbulb(true)
 	}
 
 	return (
-		<div className={portfolioClassName}>
+		<div className={introClassName}>
 			<img
 				alt="Let there be light"
 				className={lightbulbBackgroundClassName}
