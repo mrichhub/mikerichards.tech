@@ -14,8 +14,8 @@ export type TypewriterSpeed = number|{
 }
 
 export function Typewriter(props: TypewriterProps) {
-	const speedMin = props.speed !== undefined ? (typeof props.speed === "number" ? props.speed : props.speed.min) : 30
-	const speedMax = props.speed !== undefined ? (typeof props.speed === "number" ? props.speed : props.speed.max) : 120
+	const speedMin = props.speed !== undefined ? (typeof props.speed === "number" ? props.speed : props.speed.min) : 20
+	const speedMax = props.speed !== undefined ? (typeof props.speed === "number" ? props.speed : props.speed.max) : 80
 	const text = [...props.text] // 'text' must be initialized like this in order to handle emojis
 	const [currentText, setCurrentText] = useState("")
 

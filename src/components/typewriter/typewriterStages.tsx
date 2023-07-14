@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Typewriter, TypewriterSpeed } from "./typewriter"
 
 export type TypewriterStagesProps = {
+	onCompleted?: () => unknown
 	stages: TypewriterStage[]
 }
 
@@ -20,7 +21,10 @@ export function TypewriterStages(props: TypewriterStagesProps) {
 	const speed = typewriterStage?.speed
 
 	useEffect(() => {
-		if (typewriterStageIndex >= props.stages.length) { return }
+		if (typewriterStageIndex >= props.stages.length) {
+			props.onCompleted?.()
+			return
+		}
 
 		const prevStageIndex = typewriterStageIndex - 1
 		const prevStage = prevStageIndex >= 0

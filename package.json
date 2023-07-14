@@ -4,9 +4,14 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
+	"cleardist": "rm -rf dist",
+    "dev": "vite",
+	"deploy:dev": "aws s3 sync dist s3://v2.mikerichards.tech/ --delete --profile mike && aws cloudfront create-invalidation --distribution-id E33KEN56JWVFDQ --profile mike --paths \"/\" \"/*\"",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+	"prebuild": "npm run cleardist",
+	"predeploy:dev": "npm run build",
+	"postdeploy:dev": "npm run cleardist",
     "preview": "vite preview",
 	"start": "npm run dev"
   },
