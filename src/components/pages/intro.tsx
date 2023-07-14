@@ -8,15 +8,19 @@ import { useIsPageLoaded } from "../../hooks/useIsPageLoaded"
 import { TypewriterStage, TypewriterStages } from "../typewriter/typewriterStages"
 import "./intro.scss"
 
+export type IntroPageParams = {
+	stay?: boolean
+}
+
 const introTypewriterStages: TypewriterStage[] = [
-	{ text: "Hi 👋", delay: 2750, duration: 1500 },
+	{ text: "Hi 👋", delay: 3250, duration: 1500 },
 	{ text: "", speed: 20, duration: 250, },
 	{ text: "I'm Mike Richards.", duration: 1000, },
 	{ text: "I'm Mike Richards.\nWelcome to my portfolio!", duration: 2000 },
 	{ text: "", speed: 10, },
 ]
 
-export default function IntroPage() {
+export default function IntroPage(props: IntroPageParams) {
 	const isPageLoaded = useIsPageLoaded()
 	const [showLightbulb, setShowLightbulb] = useState(false)
 	const [displayMainPortfolio, setDisplayMainPortfolio] = useState(false)
@@ -60,7 +64,7 @@ export default function IntroPage() {
 	}, [showLightbulb])
 
 	useEffect(() => {
-		if (displayMainPortfolio) {
+		if (displayMainPortfolio && !props.stay) {
 			const timer = setTimeout(() => {
 				navigate("/portfolio")
 			}, 4000)

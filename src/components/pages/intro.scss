@@ -12,15 +12,16 @@
 	.avatar {
 		left: 50%;
 		max-height: 225px;
-		opacity: 0.6;
+		opacity: 0.0;
 		position: absolute;
 		top: 100%;
-		transform: translate(-40%, 0);
+		transform: translate(-40%, -20%);
 		z-index: 0;
 
 		&.show {
+			opacity: 0.6;
 			transform: translate(-40%, -100%);
-			transition: transform 1.75s ease-in-out 0.75s;
+			transition: transform 1.75s ease-in-out 0.75s, opacity 1.75s ease-in-out 0.75s;
 		}
 
 		&.disappear {

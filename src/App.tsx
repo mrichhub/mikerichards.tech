@@ -13,6 +13,7 @@ export function App() {
 				<Routes>
 					<Route path="/" Component={MainPage} />
 					<Route path="/intro" Component={IntroPage} />
+					<Route path="/intro/stay" Component={() => <IntroPage stay={true} />} />
 					<Route path="/portfolio" Component={PortfolioPage} />
 				</Routes>
 			</div>
