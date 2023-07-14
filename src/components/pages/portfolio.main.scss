@@ -19,7 +19,7 @@
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		transition: opacity 1.5s ease-in 2.0s;
+		transition: opacity 0.75s ease-in 2.0s;
 		width: 100%;
 		z-index: 0;
 
@@ -31,5 +31,13 @@
 	.content {
 		position: relative;
 		z-index: 1;
+	}
+
+	.typewriter-container {
+		left: 50%;
+		position: absolute;
+		top: 20%;
+		transform: translate(-50%, 0);
+		width: 100%;
 	}
 }

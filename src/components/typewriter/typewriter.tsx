@@ -1,22 +1,36 @@
 import { useEffect, useState } from "react"
 import { Random } from "../../common/random"
+import "./typewriter.scss"
 
-type TypewriterProps = {
+export type TypewriterProps = {
+	onFinished?: () => unknown
+	speed?: TypewriterSpeed
 	text: string
 }
 
-export function Typewriter({ text }: TypewriterProps) {
+export type TypewriterSpeed = number|{
+	max: number,
+	min: number,
+}
+
+export function Typewriter(props: TypewriterProps) {
+	const speedMin = props.speed !== undefined ? (typeof props.speed === "number" ? props.speed : props.speed.min) : 30
+	const speedMax = props.speed !== undefined ? (typeof props.speed === "number" ? props.speed : props.speed.max) : 120
+	const text = [...props.text] // 'text' must be initialized like this in order to handle emojis
 	const [currentText, setCurrentText] = useState("")
 
 	useEffect(() => {
 		// Determine if we're making forward progression
-		if (currentText === "" || text.substring(0, currentText.length) === currentText) {
+		if (currentText === "" || text.join("").substring(0, currentText.length) === currentText) {
 			if (currentText.length < text.length) {
 				const timer = setTimeout(() => {
 					setCurrentText(prevText => prevText + text[currentText.length])
-				}, Random.int(30, 100))
+				}, Random.int(speedMin, speedMax))
 
 				return () => clearTimeout(timer)
+			}
+			else {
+				props.onFinished?.()
 			}
 		}
 		// We need to delete characters
@@ -24,12 +38,15 @@ export function Typewriter({ text }: TypewriterProps) {
 			if (currentText.length > 0) {
 				const timer = setTimeout(() => {
 					setCurrentText(prevText => prevText.substring(0, prevText.length - 1))
-				}, 30)
+				}, Random.int(speedMin, speedMax))
 
 				return () => clearTimeout(timer)
 			}
+			else {
+				props.onFinished?.()
+			}
 		}
-	}, [text, currentText])
+	}, [props.text, currentText])
 
 	return (
 		<div className="typewriter">
