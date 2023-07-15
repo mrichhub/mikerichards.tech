@@ -16,7 +16,7 @@ const introTypewriterStages: TypewriterStage[] = [
 	{ text: "Hi 👋", delay: 3250, duration: 1500 },
 	{ text: "", speed: 20, duration: 250, },
 	{ text: "I'm Mike Richards.", duration: 1000, },
-	{ text: "I'm Mike Richards.\nWelcome to my portfolio!", duration: 2000 },
+	{ text: "I'm Mike Richards.\nWelcome to my tech portfolio!", duration: 2000 },
 	{ text: "", speed: 10, },
 ]
 
@@ -57,7 +57,7 @@ export default function IntroPage(props: IntroPageParams) {
 		if (showLightbulb) {
 			const timer = setTimeout(() => {
 				setDisplayMainPortfolio(true)
-			}, 2500)
+			}, 2000)
 
 			return () => clearTimeout(timer)
 		}

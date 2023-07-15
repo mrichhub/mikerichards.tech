@@ -1,10 +1,13 @@
 import classNames from "classnames"
+import { useEffect, useState } from "react"
 import lightbulbImage from "../../assets/images/lightbulb3.jpg"
 import { useIsPageLoaded } from "../../hooks/useIsPageLoaded"
+import { Typewriter } from "../typewriter/typewriter"
 import "./portfolio.scss"
 
 export default function PortfolioPage() {
 	const isPageLoaded = useIsPageLoaded()
+	const [typewriterText, setTypewriterText] = useState("")
 
 	const portfolioClassName = classNames(
 		"portfolio",
@@ -17,6 +20,16 @@ export default function PortfolioPage() {
 		"lightbulb-background",
 	)
 
+	useEffect(() => {
+		if (isPageLoaded) {
+			setTypewriterText("Mike Richards")
+		}
+	}, [isPageLoaded])
+
+	function onHomeClick() {
+		console.log("home")
+	}
+
 	return (
 		<div className={portfolioClassName}>
 			<img
@@ -24,6 +37,12 @@ export default function PortfolioPage() {
 				className={lightbulbBackgroundClassName}
 				src={lightbulbImage}
 			/>
+
+			<div className="mike-richards">
+				<a onClick={() => onHomeClick()}>
+					<Typewriter text={typewriterText} />
+				</a>
+			</div>
 
 			<div className="content">
 			</div>
