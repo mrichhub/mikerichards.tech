@@ -3,6 +3,7 @@ import { Random } from "../../common/random"
 import "./typewriter.scss"
 
 export type TypewriterProps = {
+	delay?: number
 	onFinished?: () => unknown
 	speed?: TypewriterSpeed
 	text: string
@@ -16,16 +17,18 @@ export type TypewriterSpeed = number|{
 export function Typewriter(props: TypewriterProps) {
 	const speedMin = props.speed !== undefined ? (typeof props.speed === "number" ? props.speed : props.speed.min) : 20
 	const speedMax = props.speed !== undefined ? (typeof props.speed === "number" ? props.speed : props.speed.max) : 80
-	const text = [...props.text] // 'text' must be initialized like this in order to handle emojis
+	const text = [...props.text] // 'text' must be initialized like this into an array in order to handle emojis
 	const [currentText, setCurrentText] = useState("")
 
 	useEffect(() => {
 		// Determine if we're making forward progression
 		if (currentText === "" || text.join("").substring(0, currentText.length) === currentText) {
 			if (currentText.length < text.length) {
+				const delay = currentText === "" && props.delay ? props.delay : Random.int(speedMin, speedMax)
+
 				const timer = setTimeout(() => {
 					setCurrentText(prevText => prevText + text[currentText.length])
-				}, Random.int(speedMin, speedMax))
+				}, delay)
 
 				return () => clearTimeout(timer)
 			}
@@ -51,9 +54,7 @@ export function Typewriter(props: TypewriterProps) {
 		}
 	}, [props.text, currentText])
 
-	return (
-		<div className="typewriter display-linebreaks">
-			{currentText}
-		</div>
-	)
+	return <>
+		{currentText}
+	</>
 }

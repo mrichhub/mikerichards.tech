@@ -57,7 +57,7 @@ export default function IntroPage(props: IntroPageParams) {
 		if (showLightbulb) {
 			const timer = setTimeout(() => {
 				setDisplayMainPortfolio(true)
-			}, 2000)
+			}, 2250)
 
 			return () => clearTimeout(timer)
 		}
@@ -94,7 +94,7 @@ export default function IntroPage(props: IntroPageParams) {
 			<div className="content">
 			</div>
 
-			<div className="typewriter-container">
+			<div className="typewriter-container display-linebreaks">
 				{isPageLoaded && (
 					<TypewriterStages stages={introTypewriterStages} onCompleted={() => onTypewriterFinished()} />
 				)}

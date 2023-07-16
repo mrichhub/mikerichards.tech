@@ -1,36 +1,131 @@
-.portfolio {
-	height: 100svh;
-	position: relative;
-	width: 100vw;
+:root {
+	--scroll: 0;
+}
 
-	.lightbulb-background {
-		height: 100%;
+.lightbulb-background {
+	height: 100%;
+	left: 50%;
+	max-height: 300px;
+	max-width: 300px;
+	object-fit: cover;
+	opacity: 0.4;
+	position: fixed;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	z-index: 0;
+}
+
+.nav {
+	background: rgba(26, 26, 26, max(min(calc(0.01 * var(--scroll) * 16), 0.8), 0.0));
+	backdrop-filter: saturate(max(min(calc(1% * var(--scroll) * 3600), 180%), 0%)) blur(max(min(calc(0.01 * var(--scroll) * 400px), 20px), 0px));
+	height: auto;
+	left: 0;
+	margin: 0;
+	padding: 20px;
+	position: fixed;
+	text-align: left;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+
+	.home {
+		font-size: 28px;
+		font-weight: 700;
+	}
+
+	ul {
+		display: flex;
+		justify-content: space-around;
 		left: 50%;
-		max-height: 300px;
-		max-width: 300px;
-		object-fit: cover;
-		opacity: 0.4;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		width: 100%;
-		z-index: 0;
-	}
+		width: 600px;
 
-	.mike-richards {
-		font-size: 28px;
-		font-weight: 700;
-		left: 20px;
-		position: absolute;
-		top: 20px;
+		@media screen and (max-width: 930px) {
+			left: 62%;
+			width: 65vw;
+		}
 
-		a {
-			cursor: pointer;
+		@media screen and (max-width: 600px) {
+			display: none;
 		}
 	}
+}
+
+.portfolio {
+	position: relative;
+	width: 100vw;
 
 	.content {
 		position: relative;
 		z-index: 1;
+
+		.section {
+			height: 100svh;
+			position: relative;
+			width: 100vw;
+
+			.headline {
+				font-family: 'Poppins', sans-serif;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+		
+				h1 {
+					font-size: 65px;
+					font-weight: 600;
+					margin: 0;
+					opacity: 0;
+					padding: 0;
+					transform: scale(max(min(calc(1 - (.01 * var(--scroll) * 3)), 1), 0)) translateY(max(min(calc(.01 * var(--scroll) * 2000%), 100%), 0%));
+					transition: opacity 1.25s ease-in-out;
+		
+					&.show {
+						opacity: max(min(calc(1 - (.01 * var(--scroll) * 20)), 1), 0);
+					}
+
+					&.intro-done {
+						transition: none;
+					}
+				}
+		
+				h3 {
+					font-size: 20px;
+					font-weight: 300;
+					margin: 0;
+					opacity: 0;
+					padding: 0;
+					transform: translateY(50%);
+					transition: opacity 1s ease-in-out 0.5s, transform 1s ease-in-out 0.25s;
+		
+					&.show {
+						opacity: max(min(calc(1 - (.01 * var(--scroll) * 20)), 1), 0);
+						transform: translateY(max(min(calc(.01 * var(--scroll) * 4000%), 200%), 0%)) scale(max(min(calc(1 - (.01 * var(--scroll) * 3)), 1), 0));
+					}
+
+					&.intro-done {
+						transition: none;
+					}
+				}
+			}
+		}
 	}
 }
+
+ a {
+	cursor: pointer;
+	display: inline-block;
+	transition: scale 0.2s ease-in-out, color 0.2s ease-in-out;
+
+	&:hover {
+		color: var(--yellow1);
+		scale: 1.1;
+	}
+ }
