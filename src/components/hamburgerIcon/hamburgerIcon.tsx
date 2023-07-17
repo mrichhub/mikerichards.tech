@@ -19,10 +19,11 @@ export function HamburgerIcon(props: HamburgerIconProps) {
 	}
 
 	return <>
-		<div className={classNames("hamburger-icon", { "is-open": isOpen })} onClick={() => toggleIsOpen()}>
+		<div className={classNames("hamburger-icon", { "is-open": isOpen })}>
 			<div className="top-bun"></div>
 			<div className="sustenance"></div>
 			<div className="bottom-bun"></div>
+			<div className="click-zone" onClick={() => toggleIsOpen()}></div>
 		</div>
 	</>
 }

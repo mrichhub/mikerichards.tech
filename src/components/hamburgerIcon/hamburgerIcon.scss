@@ -1,5 +1,7 @@
 .hamburger-icon {
-	div {
+	position: relative;
+
+	div:not(:last-child) {
 		background-color: var(--text-color);
 		border-radius: 1px;
 		height: 2px;
@@ -24,5 +26,13 @@
 			opacity: 0;
 			transform: rotate(45deg);
 		}
+	}
+
+	.click-zone {
+		bottom: -20px;
+		left: -20px;
+		position: absolute;
+		right: -20px;
+		top: -20px;
 	}
 }
