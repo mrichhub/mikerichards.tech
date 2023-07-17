@@ -93,13 +93,12 @@ a {
 		z-index: 1;
 
 		.section {
-			min-height: 100svh;
 			position: relative;
 			// scroll-snap-align: start;
 			width: 100vw;
 
 			&:not(:first-child) {
-				min-height: calc(100svh - 100px);
+				// min-height: calc(100svh - 100px);
 				padding-top: 100px;
 			}
 
@@ -110,6 +109,8 @@ a {
 			}
 
 			&.main {
+				min-height: 100svh;
+
 				.headline {
 					font-family: 'Poppins', sans-serif;
 					position: absolute;
@@ -204,6 +205,10 @@ a {
 
 			&.expertise {
 				// background: green;
+			}
+
+			&.contact {
+				min-height: calc(100svh - 100px);
 			}
 		}
 	}

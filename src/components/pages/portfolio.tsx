@@ -6,6 +6,7 @@ import { useIsPageLoaded } from "../../hooks/useIsPageLoaded"
 import { useIsVisible } from "../../hooks/useIsVisible"
 import { useScrollVar } from "../../hooks/useScrollVar"
 import { useTimedFlag } from "../../hooks/useTimedFlag"
+import { AnimateInWhenVisible } from "../animateInWhenVisible/animateInWhenVisible"
 import { DownArrow } from "../downarrow/downarrow"
 import { HamburgerIcon } from "../hamburgerIcon/hamburgerIcon"
 import { Typewriter } from "../typewriter/typewriter"
@@ -25,8 +26,14 @@ export default function PortfolioPage() {
 	const expertiseSectionHeader = useRef(null)
 	const expertiseSectionHeaderVisible = useIsVisible(expertiseSectionHeader)
 	const workSection = useRef<HTMLDivElement>(null)
+	const workSectionHeader = useRef(null)
+	const workSectionheaderVisible = useIsVisible(workSectionHeader)
 	const experienceSection = useRef<HTMLDivElement>(null)
+	const experienceSectionHeader = useRef(null)
+	const experienceSectionHeaderVisible = useIsVisible(experienceSectionHeader)
 	const contactSection = useRef<HTMLDivElement>(null)
+	const contactSectionHeader = useRef(null)
+	const contactSectionHeaderVisible = useIsVisible(contactSectionHeader)
 
 	function goToMain() {
 		setHamburgerMenuOpen(false)
@@ -137,22 +144,32 @@ export default function PortfolioPage() {
 
 					<div className="about-table">
 						<div className="image">
-							<img src={avatarImage} />
+							<AnimateInWhenVisible delay={250}>
+								<img src={avatarImage} />
+							</AnimateInWhenVisible>
 						</div>
 						<div className="about-content">
-							<p>
-								With 15+ years of industry experience, I've architected, lead and developed many projects across the technology spectrum. I have
-								lead development efforts on large-scale consumer-focused websites for Fortune 500 companies and I've established tech startups
-								delivering apps that have highly dynamic UIs and extreme scalability.
-							</p>
-							<p>
-								I'm passionate about tech and fueled by innovative ideas. I am driven to bring concepts into reality. I love getting into the
-								weeds with ideas, solving problems by finding solutions balanced with business needs, and building something that people love.
-							</p>
-							<p>
-								I am always open to hearing ideas and finding how I can help. Please <a onClick={() => goToContactSection()}>contact me</a> to
-								see how I can help!
-							</p>
+							<AnimateInWhenVisible delay={500}>
+								<p>
+									With 15+ years of industry experience, I've architected, lead and developed many projects across the technology spectrum. I have
+									lead development efforts on large-scale consumer-focused websites for Fortune 500 companies and I've established tech startups
+									delivering apps that have highly dynamic UIs and extreme scalability.
+								</p>
+							</AnimateInWhenVisible>
+		
+							<AnimateInWhenVisible delay={500}>
+								<p>
+									I'm passionate about tech and fueled by innovative ideas. I am driven to bring concepts into reality. I love getting into the
+									weeds with ideas, solving problems by finding solutions balanced with business needs, and building something that people love.
+								</p>
+							</AnimateInWhenVisible>
+		
+							<AnimateInWhenVisible delay={500}>
+								<p>
+									I am always open to hearing ideas and finding how I can help. Please <a onClick={() => goToContactSection()}>contact me</a> to
+									see how I can help!
+								</p>
+							</AnimateInWhenVisible>		
 						</div>
 					</div>
 				</div>
@@ -160,12 +177,18 @@ export default function PortfolioPage() {
 				<div className="section expertise" ref={expertiseSection}>
 					<h3 ref={expertiseSectionHeader}><Typewriter text={expertiseSectionHeaderVisible ? "My Expertise" : "M"} /></h3>
 				</div>
+			
+				<div className="section work" ref={workSection}>
+					<h3 ref={workSectionHeader}><Typewriter text={workSectionheaderVisible ? "Some Of My Work" : "S"} /></h3>
+				</div>
 				
-				<div className="section work" ref={workSection}>Work</div>
+				<div className="section experience" ref={experienceSection}>
+					<h3 ref={experienceSectionHeader}><Typewriter text={experienceSectionHeaderVisible ? "Experience" : "E"} /></h3>
+				</div>
 				
-				<div className="section experience" ref={experienceSection}>Experience</div>
-				
-				<div className="section contact" ref={contactSection}>Contact</div>
+				<div className="section contact" ref={contactSection}>
+					<h3 ref={contactSectionHeader}><Typewriter text={contactSectionHeaderVisible ? "Contact Me" : "C"} /></h3>
+				</div>
 			</div>
 		</div>
 
