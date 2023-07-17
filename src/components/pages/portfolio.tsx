@@ -133,7 +133,7 @@ export default function PortfolioPage() {
 				</div>
 
 				<div className="section about" ref={aboutSection}>
-					<h3 ref={aboutSectionHeader}><Typewriter text={aboutSectionHeaderVisible ? "About Me" : ""} /></h3>
+					<h3 ref={aboutSectionHeader}><Typewriter text={aboutSectionHeaderVisible ? "About Me" : "A"} /></h3>
 
 					<div className="about-table">
 						<div className="image">
@@ -158,7 +158,7 @@ export default function PortfolioPage() {
 				</div>
 				
 				<div className="section expertise" ref={expertiseSection}>
-					<h3 ref={expertiseSectionHeader}><Typewriter text={expertiseSectionHeaderVisible ? "My Expertise" : ""} /></h3>
+					<h3 ref={expertiseSectionHeader}><Typewriter text={expertiseSectionHeaderVisible ? "My Expertise" : "M"} /></h3>
 				</div>
 				
 				<div className="section work" ref={workSection}>Work</div>
