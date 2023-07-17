@@ -6,6 +6,17 @@
 // 	scroll-snap-type: y proximity;
 // }
 
+a {
+	cursor: pointer;
+	display: inline-block;
+	transition: scale 0.2s ease-in-out, color 0.2s ease-in-out;
+
+	&:hover {
+		color: var(--yellow1);
+		scale: 1.1;
+	}
+ }
+
 .lightbulb-background {
 	height: 100%;
 	left: 50%;
@@ -32,6 +43,16 @@
 	top: 0;
 	width: 100%;
 	z-index: 100;
+
+	.hamburger-icon {
+		display: none;
+		margin-right: 0;
+
+		@media screen and (max-width: 600px) {
+			display: inline-block;
+			margin-right: 30px;
+		}
+	}
 
 	.home {
 		font-size: 28px;
@@ -75,6 +96,29 @@
 			position: relative;
 			// scroll-snap-align: start;
 			width: 100vw;
+
+			&:not(:first-child) {
+				height: calc(100svh - 100px);
+				padding-top: 100px;
+			}
+
+			&.main {
+				.scroll-for-more {
+					bottom: 10%;
+					left: 50%;
+					opacity: max(min(calc(1 - (.5 * var(--scroll))), 1), 0);
+					position: absolute;
+					transform: translate(-50%, -50%);
+				}
+			}
+
+			&.about {
+				// background: blue;
+			}
+
+			&.expertise {
+				// background: green;
+			}
 
 			.headline {
 				font-family: 'Poppins', sans-serif;
@@ -133,13 +177,50 @@
 	}
 }
 
- a {
-	cursor: pointer;
-	display: inline-block;
-	transition: scale 0.2s ease-in-out, color 0.2s ease-in-out;
+.hamburger-menu-background {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	transition: opacity 0.5s ease-in-out, visibility 0s linear 1s;
+	visibility: hidden;
+	width: 100%;
+	z-index: 10;
 
-	&:hover {
-		color: var(--yellow1);
-		scale: 1.1;
+	&.is-open {
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out, visibility 0s linear;
+		visibility: visible;
 	}
- }
+}
+
+.hamburger-menu {
+	background-color: rgba(48, 48, 48, 0.75);
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	padding-top: 80px;
+	position: fixed;
+	top: 0;
+	transform: translateX(-100%);
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	width: 300px;
+	z-index: 11;
+
+	&.is-open {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+
+	ul {
+		list-style: none;
+		padding-inline-start: 30px;
+
+		li {
+			margin-bottom: 20px;
+			text-align: left;
+		}
+	}
+}
