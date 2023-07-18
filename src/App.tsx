@@ -15,6 +15,7 @@ export function App() {
 					<Route path="/intro" Component={IntroPage} />
 					<Route path="/intro/stay" Component={() => <IntroPage stay={true} />} />
 					<Route path="/portfolio" Component={PortfolioPage} />
+					<Route path="/portfolio/:sectionId" Component={PortfolioPage} />
 				</Routes>
 			</div>
 		</BrowserRouter>
