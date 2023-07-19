@@ -1,0 +1,75 @@
+.experience-section {
+	padding: 0 10px;
+
+	.item {
+		max-height: 60px;
+		margin: 5px auto;
+		max-width: 600px;
+		overflow: hidden;
+		transition: max-height 0.5s ease-in-out;
+
+		&.selected {
+			max-height: 670px;
+		}
+
+		.header {
+			background-color: rgba(34, 28, 199, 0.7);
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			padding: 20px;
+			
+			div {
+				box-sizing: border-box;
+
+				&.title {
+					text-align: left;
+
+					h4 {
+						margin-block-start: 0;
+						margin-block-end: 0;
+					}
+				}
+
+				&.logo {
+					text-align: right;
+
+					img {
+						max-height: 20px;
+					}
+				}
+			}
+		}
+
+		.description {
+			background-color: rgba(16, 21, 94, 0.7);
+			font-weight: 400;
+			margin-top: 5px;
+			padding: 20px;
+		}
+
+		.skills {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				list-style: none;
+				justify-content: center;
+				align-items: center;
+				padding: 0;
+				max-width: 100%;
+				margin: 0;
+
+				li {
+					display: inline-block;
+					padding: 8px 15px;
+					background-color: rgba(34, 28, 199, 0.7);
+					border-radius: 20px;
+					margin: 5px;
+				}
+			}
+		}
+	}
+}

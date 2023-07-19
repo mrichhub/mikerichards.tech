@@ -5,14 +5,11 @@ import { Typewriter, TypewriterProps } from "./typewriter"
 export function TypewriterWhenVisible(props: TypewriterProps) {
 	const ref = useRef(null)
 	const refVisible = useIsVisible(ref)
-	const [text, setText] = useState(props.text.substring(0, 1))
+	const [text, setText] = useState("")
 
 	useEffect(() => {
 		if (refVisible) {
 			setText(props.text)
-		}
-		else {
-			setText(props.text.substring(0, 1))
 		}
 	}, [refVisible])
 

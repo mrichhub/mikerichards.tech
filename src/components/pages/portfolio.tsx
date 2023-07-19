@@ -1,8 +1,10 @@
 import classNames from "classnames"
 import { useEffect, useRef, useState } from "react"
 import { useParams } from "react-router-dom"
+import leaderIcon from "../../assets/images/leader-icon.png"
 import lightbulbImage from "../../assets/images/lightbulb3.jpg"
 import avatarImage from "../../assets/images/mike-richards-avatar.png"
+import skillsIcon from "../../assets/images/skills-icon.png"
 import { useIsPageLoaded } from "../../hooks/useIsPageLoaded"
 import { useScrollVar } from "../../hooks/useScrollVar"
 import { useTimedFlag } from "../../hooks/useTimedFlag"
@@ -12,12 +14,13 @@ import { HamburgerIcon } from "../hamburgerIcon/hamburgerIcon"
 import { Typewriter } from "../typewriter/typewriter"
 import { TypewriterWhenVisible } from "../typewriter/typewriterWhenVisible"
 import "./portfolio.scss"
+import { ExperienceSection } from "./portfolio/experienceSection"
 
 export default function PortfolioPage() {
 	useScrollVar()
 	
-	const isPageLoaded = useIsPageLoaded()
 	const { sectionId } = useParams()
+	const isPageLoaded = useIsPageLoaded()
 	const introDone = useTimedFlag(2000)
 	const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false)
 	const mainSection = useRef<HTMLDivElement>(null)
@@ -134,7 +137,89 @@ export default function PortfolioPage() {
 				<div className="section expertise" ref={expertiseSection}>
 					<h3><TypewriterWhenVisible text="My Expertise" /></h3>
 
-					{/* <div className="" */}
+					<div className="items">
+						<AnimateInWhenVisible delay={250}>
+							<div className="item">
+								<div className="header">
+									<div className="icon">
+										<img src={leaderIcon} alt="Leader" />
+									</div>
+									<div className="headline">
+										<h4><TypewriterWhenVisible text="Tech Leader" delay={500} /></h4>
+									</div>
+								</div>
+								<p>
+									Experienced with leading technology development in growth stage companies.
+								</p>
+							</div>
+						</AnimateInWhenVisible>
+
+						<AnimateInWhenVisible delay={500}>
+							<div className="item">
+								<div className="header">
+									<div className="icon">
+										<img src={skillsIcon} alt="Skills" />
+									</div>
+									<div className="headline">
+										<h4><TypewriterWhenVisible text="Skills" delay={750} /></h4>
+									</div>
+								</div>
+								<em className="note">
+									These are just some of the skills I'm proficient at as of late. I'm open to all technologies and constantly learning.
+								</em>
+								<ul>
+									<li>
+										<h5>React</h5>
+										<em>(This site developed in React)</em>
+										<a href="https://github.com/mrichhub/mikerichards.tech">See code on GitHub</a>
+									</li>
+									<li>
+										<h5>iOS</h5>
+										Swift, Obj-C
+									</li>
+									<li>
+										<h5>Node.js</h5>
+										Express, Socket.io
+									</li>
+									<li>
+										<h5>Typescript</h5>
+									</li>
+									<li>
+										<h5>C#</h5>
+									</li>
+									<li>
+										<h5>APIs</h5>
+										Protocols, data-handling, scalability
+									</li>
+									<li>
+										<h5>Web Sockets</h5>
+										Real-time data, scalability
+									</li>
+									<li>
+										<h5>Cloud</h5>
+										AWS, Azure
+									</li>
+									<li>
+										<h5>Web</h5>
+										React, Redux, Angular, etc.
+									</li>
+								</ul>
+							</div>
+						</AnimateInWhenVisible>
+
+						<AnimateInWhenVisible delay={750}>
+							<div className="item">
+								<div className="header">
+									<div className="icon">
+										<img src={skillsIcon} alt="Skills" />
+									</div>
+									<div className="headline">
+										<h4><TypewriterWhenVisible text="Something Else" delay={1000} /></h4>
+									</div>
+								</div>
+							</div>
+						</AnimateInWhenVisible>
+					</div>
 				</div>
 			
 				<div className="section work" ref={workSection}>
@@ -142,7 +227,9 @@ export default function PortfolioPage() {
 				</div>
 				
 				<div className="section experience" ref={experienceSection}>
-					<h3><TypewriterWhenVisible text="Experience" /></h3>
+					<h3><TypewriterWhenVisible text="Professional Experience" /></h3>
+
+					<ExperienceSection />
 				</div>
 				
 				<div className="section contact" ref={contactSection}>
