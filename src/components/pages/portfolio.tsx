@@ -146,11 +146,14 @@ export default function PortfolioPage() {
 										<img src={leaderIcon} alt="Leader" />
 									</div>
 									<div className="headline">
-										<h4><TypewriterWhenVisible text="Tech Leader" delay={500} /></h4>
+										<h4><TypewriterWhenVisible text="Tech" delay={500} /></h4>
 									</div>
 								</div>
 								<p>
-									Experienced with leading technology development in growth stage companies.
+									Experienced with leading technology development in growth stage companies, as well as going heads down to get code done.
+								</p>
+								<p>
+									Tech is my passion, it's what I do in my free time, and I like delivering quality products that make people happy.
 								</p>
 							</div>
 						</AnimateInWhenVisible>
@@ -208,7 +211,7 @@ export default function PortfolioPage() {
 							</div>
 						</AnimateInWhenVisible>
 
-						<AnimateInWhenVisible delay={750}>
+						{/* <AnimateInWhenVisible delay={750}>
 							<div className="item">
 								<div className="header">
 									<div className="icon">
@@ -219,7 +222,7 @@ export default function PortfolioPage() {
 									</div>
 								</div>
 							</div>
-						</AnimateInWhenVisible>
+						</AnimateInWhenVisible> */}
 					</div>
 				</div>
 			
