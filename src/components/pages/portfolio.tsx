@@ -236,7 +236,19 @@ export default function PortfolioPage() {
 				</div>
 				
 				<div className="section contact" ref={contactSection}>
-					<h3><TypewriterWhenVisible text="Contact Me" /></h3>
+					<h3><TypewriterWhenVisible text="Contact" /></h3>
+
+					<div className="content">
+						<h4>Available for select opportunities</h4>
+
+						<p>
+							Do you need some tech help? Send me an email to contact me!
+						</p>
+
+						<div>
+							<a href="mailto: hi@mikerichards.tech">hi@mikerichards.tech</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
