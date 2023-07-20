@@ -15,6 +15,7 @@ import { Typewriter } from "../typewriter/typewriter"
 import { TypewriterWhenVisible } from "../typewriter/typewriterWhenVisible"
 import "./portfolio.scss"
 import { ExperienceSection } from "./portfolio/experienceSection"
+import { WorkSection } from "./portfolio/workSection"
 
 export default function PortfolioPage() {
 	useScrollVar()
@@ -224,6 +225,8 @@ export default function PortfolioPage() {
 			
 				<div className="section work" ref={workSection}>
 					<h3><TypewriterWhenVisible text="Some of My Work" /></h3>
+
+					<WorkSection />
 				</div>
 				
 				<div className="section experience" ref={experienceSection}>

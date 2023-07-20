@@ -61,6 +61,66 @@ export function ExperienceSection() {
 					</div>
 				</div>
 			</AnimateInWhenVisible>
+
+			<AnimateInWhenVisible delay={250}>
+				<div className={classNames("item", { selected: experienceSelected === Experience.engauge })} onClick={() => selectExperience(Experience.engauge)}>
+					<div className="header">
+						<div className="title"><h4>Innovation Architect</h4></div>
+						<div className="logo"><img src={engaugeLogo} alt="Engauge" /></div>
+					</div>
+
+					<div className="description">
+						<p>
+							Engauge (now Moxie) was an integrated marketing and advertising agency. I worked in its digital arm responsible for
+							digital products that ranged from innovative tech to apps and websites.
+						</p>
+
+						<p>
+							As part of Engauge, I architected tech solutions for many client projects. I worked on large-scale company websites
+							for clients such as Home Depot, Food Lion and Outaback, and also researched and experimented with new tech to
+							showcase internally and to clients to keep the organization at the forefront of the industry.
+						</p>
+
+						<div className="skills">
+							<ul className="skills">
+								<li>iOS</li>
+								<li>Swift</li>
+								<li>Obj-C</li>
+								<li>C#</li>
+								<li>Kinect</li>
+								<li>ASP.NET</li>
+								<li>Android</li>
+								<li>Java</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</AnimateInWhenVisible>
+
+			<AnimateInWhenVisible delay={250}>
+				<div className={classNames("item", { selected: experienceSelected === Experience.att })} onClick={() => selectExperience(Experience.att)}>
+					<div className="header">
+						<div className="title"><h4>iOS & Windows Phone</h4></div>
+						<div className="logo"><img src={attLogo} alt="AT&T Digital Life" /></div>
+					</div>
+
+					<div className="description">
+						<p>
+							Worked in teams to create v2 of their Digital Life product, AT&T's version of IoT where users can control lights,
+							monitor cameras and setup smart actions.
+						</p>
+
+						<div className="skills">
+							<ul className="skills">
+								<li>iOS</li>
+								<li>Swift</li>
+								<li>Windows Phone</li>
+								<li>C#</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</AnimateInWhenVisible>	
 				
 			<AnimateInWhenVisible delay={250}>
 				<div className={classNames("item", { selected: experienceSelected === Experience.sendit })} onClick={() => selectExperience(Experience.sendit)}>
@@ -103,66 +163,6 @@ export function ExperienceSection() {
 							<ul className="skills">
 								<li>iOS</li>
 								<li>Swift</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</AnimateInWhenVisible>			
-			
-			<AnimateInWhenVisible delay={250}>
-				<div className={classNames("item", { selected: experienceSelected === Experience.att })} onClick={() => selectExperience(Experience.att)}>
-					<div className="header">
-						<div className="title"><h4>iOS & Windows Phone</h4></div>
-						<div className="logo"><img src={attLogo} alt="AT&T Digital Life" /></div>
-					</div>
-
-					<div className="description">
-						<p>
-							Worked in teams to create v2 of their Digital Life product, AT&T's version of IoT where users can control lights,
-							monitor cameras and setup smart actions.
-						</p>
-
-						<div className="skills">
-							<ul className="skills">
-								<li>iOS</li>
-								<li>Swift</li>
-								<li>Windows Phone</li>
-								<li>C#</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</AnimateInWhenVisible>			
-			
-			<AnimateInWhenVisible delay={250}>
-				<div className={classNames("item", { selected: experienceSelected === Experience.engauge })} onClick={() => selectExperience(Experience.engauge)}>
-					<div className="header">
-						<div className="title"><h4>Innovation Architect</h4></div>
-						<div className="logo"><img src={engaugeLogo} alt="Engauge" /></div>
-					</div>
-
-					<div className="description">
-						<p>
-							Engauge (now Moxie) was an integrated marketing and advertising agency. I worked in its digital arm responsible for
-							digital products that ranged from innovative tech to apps and websites.
-						</p>
-
-						<p>
-							As part of Engauge, I architected tech solutions for many client projects. I worked on large-scale company websites
-							for clients such as Home Depot, Food Lion and Outaback, and also researched and experimented with new tech to
-							showcase internally and to clients to keep the organization at the forefront of the industry.
-						</p>
-
-						<div className="skills">
-							<ul className="skills">
-								<li>iOS</li>
-								<li>Swift</li>
-								<li>Obj-C</li>
-								<li>C#</li>
-								<li>Kinect</li>
-								<li>ASP.NET</li>
-								<li>Android</li>
-								<li>Java</li>
 							</ul>
 						</div>
 					</div>
