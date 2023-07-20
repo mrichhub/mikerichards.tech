@@ -113,7 +113,7 @@ export function WorkSection() {
 						The Countertop Estimator is a tool for customers to create estimates at home for
 						the purchase and installation of countertops offered by Home Depot. The estimator
 						gives an array of options the user can sort through and choose, like surface type,
-						surface color, edging, cutouts, sinks, etc. I lead and developed the app.
+						surface color, edging, cutouts, sinks, etc. I led and developed the app.
 					</div>
 				</div>
 			</AnimateInWhenVisible>

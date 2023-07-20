@@ -7,6 +7,7 @@
 // }
 
 a {
+	color: var(--text-color);
 	cursor: pointer;
 	display: inline-block;
 	transition: scale 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -14,6 +15,10 @@ a {
 	&:hover {
 		color: var(--yellow1);
 		scale: 1.1;
+	}
+
+	&:visited {
+		color: var(--text-color);
 	}
  }
 
@@ -293,6 +298,8 @@ a {
 								}
 
 								a {
+									color: var(--text-color);
+
 									&:visited {
 										color: var(--text-color);
 									}

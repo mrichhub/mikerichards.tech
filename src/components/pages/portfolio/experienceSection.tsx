@@ -34,13 +34,13 @@ export function ExperienceSection() {
 
 					<div className="description">
 						<p>
-							Helped co-found FanBeat and built tech from the ground up. Created a portfolio of games
+							Co-Found FanBeat and built tech from the ground up. Created a portfolio of games
 							that ranged from a live-action game capable of handling hundreds of thousands of simultaneous
 							users, to a daily fantasy game where users could make sports picks for a chance to win money.
 						</p>
 
 						<p>
-							Lead the tech through partnerships with sports teams, media companies and brands.
+							Led the tech through partnerships with sports teams, media companies and brands.
 						</p>
 
 						<div className="skills">
@@ -77,7 +77,7 @@ export function ExperienceSection() {
 
 						<p>
 							As part of Engauge, I architected tech solutions for many client projects. I worked on large-scale company websites
-							for clients such as Home Depot, Food Lion and Outaback, and also researched and experimented with new tech to
+							for clients such as Home Depot, Food Lion and Outback, and also researched and experimented with new tech to
 							showcase internally and to clients to keep the organization at the forefront of the industry.
 						</p>
 

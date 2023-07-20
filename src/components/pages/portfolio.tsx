@@ -112,9 +112,9 @@ export default function PortfolioPage() {
 						<div className="about-content">
 							<AnimateInWhenVisible delay={250}>
 								<p>
-									With 15+ years of industry experience, I've architected, lead and developed many projects across the technology spectrum. I have
-									lead development efforts on large-scale consumer-focused websites for Fortune 500 companies and I've established tech startups
-									delivering apps that have highly dynamic UIs and extreme scalability.
+									With 15+ years of industry experience, I've architected, led and developed many projects across the technology spectrum. I
+									led development efforts of large-scale consumer-focused websites for Fortune 500 companies, and I've established tech startups
+									that deliver apps with highly dynamic UIs and extreme scalability.
 								</p>
 							</AnimateInWhenVisible>
 		
@@ -166,13 +166,13 @@ export default function PortfolioPage() {
 									</div>
 								</div>
 								<em className="note">
-									These are just some of the skills I'm proficient at as of late. I'm open to all technologies and constantly learning.
+									These are the skills I'm most proficient at. I'm open to all technologies and continually furthering my knowledge.
 								</em>
 								<ul>
 									<li>
 										<h5>React</h5>
 										<em>(This site developed in React)</em>
-										<a href="https://github.com/mrichhub/mikerichards.tech">See code on GitHub</a>
+										<a href="https://github.com/mrichhub/mikerichards.tech" target="_blank">See code on GitHub</a>
 									</li>
 									<li>
 										<h5>iOS</h5>
@@ -224,7 +224,7 @@ export default function PortfolioPage() {
 				</div>
 			
 				<div className="section work" ref={workSection}>
-					<h3><TypewriterWhenVisible text="Some of My Work" /></h3>
+					<h3><TypewriterWhenVisible text="Work Samples" /></h3>
 
 					<WorkSection />
 				</div>
