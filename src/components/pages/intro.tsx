@@ -1,5 +1,5 @@
 import classNames from "classnames"
-import { useEffect, useState } from "react"
+import { startTransition, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import lightbulbImage from "../../assets/images/lightbulb3.jpg"
 import avatarImage from "../../assets/images/mike-richards-avatar.png"
@@ -65,16 +65,22 @@ export default function IntroPage(props: IntroPageParams) {
 
 	useEffect(() => {
 		if (displayMainPortfolio && !props.stay) {
-			const timer = setTimeout(() => {
-				navigate("/portfolio")
-			}, 4000)
+			const timer = setTimeout(() => goToPortfolio(), 4000)
 
 			return () => clearTimeout(timer)
 		}
 	}, [displayMainPortfolio])
 
+	function goToPortfolio() {
+		navigate("/portfolio")
+	}
+
 	function onTypewriterFinished() {
 		setShowLightbulb(true)
+	}
+
+	function skipIntro() {
+		startTransition(() => goToPortfolio())
 	}
 
 	return (
@@ -98,6 +104,10 @@ export default function IntroPage(props: IntroPageParams) {
 				{isPageLoaded && (
 					<TypewriterStages stages={introTypewriterStages} onCompleted={() => onTypewriterFinished()} />
 				)}
+			</div>
+
+			<div className={classNames("skip-button", { "show": isPageLoaded && !displayMainPortfolio})}>
+				<button onClick={() => skipIntro()}>Skip</button>
 			</div>
 		</div>
 	)

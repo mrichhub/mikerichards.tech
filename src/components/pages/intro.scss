@@ -68,4 +68,29 @@
 		transform: translate(-50%, -350px);
 		width: 100%;
 	}
+
+	.skip-button {
+		bottom: 100px;
+		right: 5%;
+		opacity: 0;
+		position: absolute;
+		transition: opacity 1.5s ease-in-out;
+
+		button {
+			background: transparent;
+			border: solid #ffffff 3px;
+			border-radius: 10px;
+			color: white;
+			padding: 10px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&.show {
+			opacity: 0.3;
+			transition: opacity 2s ease-in-out 1.5s;
+		}
+	}
 }
