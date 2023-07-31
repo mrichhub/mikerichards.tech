@@ -1,4 +1,4 @@
-import { lazy } from "react"
+import { lazy, useEffect } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import "./App.scss"
 
@@ -7,6 +7,11 @@ const PortfolioPage = lazy(() => import("./components/pages/portfolio"))
 const IntroPage = lazy(() => import("./components/pages/intro"))
 
 export function App() {
+	useEffect(() => {
+		console.log("🚨 HACKER DETECTED! 👀 I see you checking out my console!")
+		console.log("And I appreciate you being here. I'd love to to connect with you, email me at MayTheSourceBeWithYou (at) mikerichards.tech")
+	}, [])
+
 	return (
 		<BrowserRouter>
 			<div className="App">

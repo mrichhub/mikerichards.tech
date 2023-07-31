@@ -1,13 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App.tsx"
+import { Config } from "./config/config.ts"
 import "./main.scss"
 
 const root = ReactDOM.createRoot(document.getElementById("root")!)
 
-const useStrict = true
-
-if (useStrict) {
+if (Config.useStrict) {
 	root.render(
 		<React.StrictMode>
 			<App />
