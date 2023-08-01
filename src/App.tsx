@@ -8,7 +8,8 @@ const IntroPage = lazy(() => import("./components/pages/intro"))
 
 export function App() {
 	useEffect(() => {
-		console.log("🚨 HACKER DETECTED! I see you checking out my console! 👀 And... I appreciate you being here. I'd love to to connect with you, email me at MayTheSourceBeWithYou (at) mikerichards.tech and I'll respond even quicker.")
+		console.log("🚨 HACKER DETECTED! I see you checking out my console! 👀")
+		console.log("And... I appreciate you being here 😁 I'd love to to connect with you, email me at MayTheSourceBeWithYou (at) mikerichards.tech and I'll respond even quicker.")
 	}, [])
 
 	return (
