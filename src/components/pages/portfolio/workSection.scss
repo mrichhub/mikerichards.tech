@@ -1,6 +1,6 @@
 .work-section {
 	.item {
-		margin: 30px 0;
+		margin: 30px 0 80px;
 
 		img {
 			margin: 0 40px;
@@ -46,10 +46,42 @@
 
 		.description {
 			font-weight: 400;
-			max-width: 500px;
+			max-width: 650px;
 			margin: 0 auto;
+			padding: 0 15px;
+
+			ul {
+				li {
+					text-align: left;
+				}
+			}
 		}
 
+	}
+
+	div {
+		&:nth-child(2n) {
+			.item {
+				img {
+					transform: perspective(800px) rotateY(-25deg) scale(1) rotateX(10deg);
+		
+					&:hover {
+						transform:
+							perspective(800px)
+							rotateY(25deg)
+							translateY(-50px)
+							rotateX(10deg)
+							scale(2);  
+					}
+				}	
+			}
+		}
+
+		&:last-child {
+			.item {
+
+			}
+		}
 	}
 
 	div:nth-child(2n) {
@@ -66,6 +98,12 @@
 						scale(2);  
 				}
 			}	
+		}
+	}
+
+	div:last-child {
+		.item {
+			margin: 30px 0 20px;
 		}
 	}
 }

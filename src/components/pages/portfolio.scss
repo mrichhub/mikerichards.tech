@@ -174,7 +174,7 @@ a {
 				.scroll-for-more {
 					bottom: 10%;
 					left: 50%;
-					opacity: max(min(calc(1 - (.1 * var(--scroll))), 1), 0);
+					opacity: max(min(calc(1 - (.4 * var(--scroll))), 1), 0);
 					position: absolute;
 					transform: translate(-50%, -50%);
 				}

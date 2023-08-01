@@ -28,11 +28,18 @@ export function WorkSection() {
 					<img src={fanbeatScreenshot2} alt="FanBeat" />
 					<img src={fanbeatScreenshot3} alt="FanBeat" />
 
-					<h4>FanBeat</h4>
+					<h4>FanBeat Live-Action</h4>
 					
 					<div className="description">
-						I co-founded the startup and architected the full-stack solution that allows
-						hundreds of thousands of users to play simultaneously.
+						This is FanBeat's core product, providing a real-time game that runs alongside
+						sporting events, producing prediction-the-action and trivia questions to enhance the experience.
+						
+						<ul>
+							<li>Architected and developed backend infrastructure on AWS. Designed and load tested to handle hundreds of thousands of simultaneous connections across the US.</li>
+							<li>Implemented a socket service to synchronize data on devices with low latency even over the same heavy volume.</li>
+							<li>Built iOS app using Swift. Heavy use of UIKit, async/await, and network communication.</li>
+							<li>Led development of web app, held stand-ups and organized sprint demos.</li>
+						</ul>
 					</div>
 				</div>
 			</AnimateInWhenVisible>
@@ -46,9 +53,14 @@ export function WorkSection() {
 					<h4>FanBeat Daily</h4>
 					
 					<div className="description">
-						Another game in the FanBeat portfolio, a DFS (Daily Fantasy Sports) game where
-						users can choose over/unders for players for a chance to win money. I developed
-						the API and React app.
+						FanBeat Daily is a DFS (Daily Fantasy Sports) app where users can predict over/under for sports players for a chance to win money.
+
+						<ul>
+							<li>Led and organized product design. I strategized with business, searched for contract designers and html developers, and organized sprints for development.</li>
+							<li>Developed scalable API using Node.js and TypeScript on AWS infrastructure.</li>
+							<li>Implemented web app using React and TypeScript.</li>
+							<li>Integrated PayPal for deposits and withdrawals.</li>
+						</ul>
 					</div>
 				</div>
 			</AnimateInWhenVisible>
@@ -62,9 +74,12 @@ export function WorkSection() {
 					<h4>sendit</h4>
 					
 					<div className="description">
-						SendIt is a fun app for creating Snap stickers and posing questions on SnapChat
-						withanonymous replies. I helped create the MVP of the iOS app, and worked on
-						iterations of it as its user base rapidly grew.
+						<ul>
+							<li>Worked on agile team of 2-3 iOS developers to create a MVP of the iOS app based on designs from the founder.</li>
+							<li>I owned the data handling; implementing structure and calls to the API and saving data to Core Data.</li>
+							<li>Implemented SnapChat's OAuth login.</li>
+							<li>Worked on a number of visual elements that were heavy on animation using UIKit.</li>
+						</ul>
 					</div>
 				</div>
 			</AnimateInWhenVisible>
@@ -96,9 +111,13 @@ export function WorkSection() {
 					<h4>AT&amp;T Digital Life</h4>
 					
 					<div className="description">
-						Digital Life is AT&T's IoT and home security solution. I worked with teams of
-						developers to create a v2.0 of their service. I worked on UI and integration
-						points with a variety of automated lights, door locks, keypads and video feeds.
+						Worked in teams to create v2 of their Digital Life product, AT&T's version of IoT where users can control lights, monitor cameras and setup smart actions.
+
+						<ul>
+							<li>Worked on team in agile environment with sprint planning, sprint demos and standups.</li>
+							<li>Implemented cameras feature, allowing user to view snapshots, play recordings and stream live video from their cameras.</li>
+							<li>On Windows Phone, I implemented a Tiles UI that mimicked the Windows Phone Home UI, allowing users to quickly see their devices, turn on/off lights, or go deeper into their devices.</li>
+						</ul>
 					</div>
 				</div>
 			</AnimateInWhenVisible>
@@ -110,10 +129,15 @@ export function WorkSection() {
 					<h4>Home Depot - Countertop Estimator</h4>
 					
 					<div className="description">
-						The Countertop Estimator is a tool for customers to create estimates at home for
-						the purchase and installation of countertops offered by Home Depot. The estimator
-						gives an array of options the user can sort through and choose, like surface type,
-						surface color, edging, cutouts, sinks, etc. I led and developed the app.
+						The Countertop Estimator was a tool for customers to create estimates at home for
+						the purchase and installation of countertops offered by Home Depot.
+
+						<ul>
+							<li>Architected, built and led development.</li>
+							<li>Worked with UX, design and business teams from concept through production.</li>
+							<li>Worked closely with Home Depot's team to define a database structure and data transfer that would ensure pricing data reliability.</li>
+							<li>Maintained and added features and products.</li>
+						</ul>
 					</div>
 				</div>
 			</AnimateInWhenVisible>
