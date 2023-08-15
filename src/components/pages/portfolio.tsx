@@ -92,7 +92,7 @@ export default function PortfolioPage() {
 				<div className="section main" ref={mainSection}>
 					<div className="headline">
 						<h1 className={classNames({ show: isPageLoaded, "intro-done": introDone })}>MIKE RICHARDS</h1>
-						<h2 className={classNames({ show: isPageLoaded, "intro-done": introDone })}>Startup Founder, Full-Stack Engineer, Systems Architect &amp; more...</h2>
+						<h2 className={classNames({ show: isPageLoaded, "intro-done": introDone })}>Full-Stack Engineer, Systems Architect, Startup Founder, Tech Enthusiast &amp; more...</h2>
 					</div>
 
 					<div className="scroll-for-more">
@@ -112,25 +112,28 @@ export default function PortfolioPage() {
 						<div className="about-content">
 							<AnimateInWhenVisible delay={250}>
 								<p>
-									With 15+ years of industry experience, I've architected, led and developed many projects across the technology spectrum. I
-									led development efforts of large-scale consumer-focused websites for Fortune 500 companies, and I've established tech startups
-									that deliver apps with highly dynamic UIs and extreme scalability.
+									With over 15 years of tech industry experience, I've developed, architected and led many projects across the technology spectrum.
+									I've engineered large-scale consumer-focused apps for Fortune 500 companies, and I've established tech startups that deliver 
+									apps with highly dynamic UIs and extreme scalability.
 								</p>
 							</AnimateInWhenVisible>
-		
+
 							<AnimateInWhenVisible delay={250}>
 								<p>
-									I'm passionate about tech and fueled by innovative ideas. I am driven to bring concepts into reality. I love getting into the
-									weeds with ideas, solving problems by finding solutions balanced with business needs, and building something that people love.
+									I've consistently embraced the challenges of various roles. As a collaborative teammate, I've contributed to feature enhancements,
+									placing a strong emphasis on exceptional user experiences while maintaining optimized and readable code. Additionally, I have a
+									deep understanding of the full stack, and have architected systems that align with and further business objectives.
 								</p>
 							</AnimateInWhenVisible>
-		
+
 							<AnimateInWhenVisible delay={250}>
 								<p>
-									I am always open to hearing ideas and finding how I can help. Please <a onClick={() => goToSection(contactSection)}>contact me</a> to
-									see how I can help!
+									Technology is my passion, and I love creating experiences that people enjoy. What truly excites me is the ability to transform
+									ideas - no matter their scale - into realities. With a robust skill set at my disposal, I am well-equipped to navigate the
+									complexities of bringing concepts to life. I have the expertise to nurture products, fostering their growth in a manner that
+									is both sustainable and scalable.
 								</p>
-							</AnimateInWhenVisible>		
+							</AnimateInWhenVisible>
 						</div>
 					</div>
 				</div>
@@ -150,7 +153,7 @@ export default function PortfolioPage() {
 									</div>
 								</div>
 								<p>
-									Experienced with leading technology development in growth stage companies, as well as going heads down to get code done.
+									Experienced with leading technology development in growth stage companies, as well as getting heads down to get code done.
 								</p>
 								<p>
 									Tech is my passion, it's what I do in my free time, and I like delivering quality products that make people happy.
