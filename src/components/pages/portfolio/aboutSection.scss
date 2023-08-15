@@ -1,0 +1,28 @@
+.about-section {
+	.about-table {
+		margin: 0 auto;
+		max-width: 800px;
+
+		.image {
+			padding: 15px;
+
+			img {
+				max-height: 150px;
+				max-width: 150px;
+				opacity: 0.9;
+				transform: translateX(15px);
+			}
+		}
+
+		.about-content {
+			// background-color: rgba(var(--yellow1RGB), 0.7);
+			font-size: 18px;
+			font-weight: 400;
+			padding: 15px;
+		}
+	}
+
+	a {
+		text-decoration: underline;
+	}
+}

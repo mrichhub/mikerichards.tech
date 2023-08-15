@@ -1,20 +1,19 @@
 import classNames from "classnames"
 import { useEffect, useRef, useState } from "react"
 import { useParams } from "react-router-dom"
-import leaderIcon from "../../assets/images/leader-icon.png"
 import lightbulbImage from "../../assets/images/lightbulb3.jpg"
-import avatarImage from "../../assets/images/mike-richards-avatar.png"
-import skillsIcon from "../../assets/images/skills-icon.png"
 import { useIsPageLoaded } from "../../hooks/useIsPageLoaded"
 import { useScrollVar } from "../../hooks/useScrollVar"
 import { useTimedFlag } from "../../hooks/useTimedFlag"
-import { AnimateInWhenVisible } from "../animateInWhenVisible/animateInWhenVisible"
 import { DownArrow } from "../downarrow/downarrow"
 import { HamburgerIcon } from "../hamburgerIcon/hamburgerIcon"
 import { Typewriter } from "../typewriter/typewriter"
 import { TypewriterWhenVisible } from "../typewriter/typewriterWhenVisible"
 import "./portfolio.scss"
+import { AboutSection } from "./portfolio/aboutSection"
+import { ContactSection } from "./portfolio/contactSection"
 import { ExperienceSection } from "./portfolio/experienceSection"
+import { SkillsSection } from "./portfolio/skillsSection"
 import { WorkSection } from "./portfolio/workSection"
 
 export default function PortfolioPage() {
@@ -26,7 +25,7 @@ export default function PortfolioPage() {
 	const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false)
 	const mainSection = useRef<HTMLDivElement>(null)
 	const aboutSection = useRef<HTMLDivElement>(null)
-	const expertiseSection = useRef<HTMLDivElement>(null)
+	const skillsSection = useRef<HTMLDivElement>(null)
 	const workSection = useRef<HTMLDivElement>(null)
 	const experienceSection = useRef<HTMLDivElement>(null)
 	const contactSection = useRef<HTMLDivElement>(null)
@@ -46,8 +45,8 @@ export default function PortfolioPage() {
 				goToSection(aboutSection)
 				break
 
-			case "expertise":
-				goToSection(expertiseSection)
+			case "skills":
+				goToSection(skillsSection)
 				break
 
 			case "work":
@@ -80,7 +79,7 @@ export default function PortfolioPage() {
 
 			<ul>
 				<li><a onClick={() => goToSection(aboutSection)}><Typewriter text="# About" delay={200} speed={20} /></a></li>
-				<li><a onClick={() => goToSection(expertiseSection)}><Typewriter text="# Expertise" delay={340} speed={20} /></a></li>
+				<li><a onClick={() => goToSection(skillsSection)}><Typewriter text="# Skills" delay={340} speed={20} /></a></li>
 				<li><a onClick={() => goToSection(workSection)}><Typewriter text="# Work" delay={560} speed={20} /></a></li>
 				<li><a onClick={() => goToSection(experienceSection)}><Typewriter text="# Experience" delay={680} speed={20} /></a></li>
 				<li><a onClick={() => goToSection(contactSection)}><Typewriter text="# Contact" delay={920} speed={20} /></a></li>
@@ -103,130 +102,13 @@ export default function PortfolioPage() {
 				<div className="section about" ref={aboutSection}>
 					<h3><TypewriterWhenVisible text="About Me" /></h3>
 
-					<div className="about-table">
-						<div className="image">
-							<AnimateInWhenVisible delay={250}>
-								<img src={avatarImage} />
-							</AnimateInWhenVisible>
-						</div>
-						<div className="about-content">
-							<AnimateInWhenVisible delay={250}>
-								<p>
-									With over 15 years of tech industry experience, I've developed, architected and led many projects across the technology spectrum.
-									I've engineered large-scale consumer-focused apps for Fortune 500 companies, and I've established tech startups that deliver 
-									apps with highly dynamic UIs and extreme scalability.
-								</p>
-							</AnimateInWhenVisible>
-
-							<AnimateInWhenVisible delay={250}>
-								<p>
-									I've consistently embraced the challenges of various roles. As a collaborative teammate, I've contributed to feature enhancements,
-									placing a strong emphasis on exceptional user experiences while maintaining optimized and readable code. Additionally, I have a
-									deep understanding of the full stack, and have architected systems that align with and further business objectives.
-								</p>
-							</AnimateInWhenVisible>
-
-							<AnimateInWhenVisible delay={250}>
-								<p>
-									Technology is my passion, and I love creating experiences that people enjoy. What truly excites me is the ability to transform
-									ideas - no matter their scale - into realities. With a robust skill set at my disposal, I am well-equipped to navigate the
-									complexities of bringing concepts to life. I have the expertise to nurture products, fostering their growth in a manner that
-									is both sustainable and scalable.
-								</p>
-							</AnimateInWhenVisible>
-						</div>
-					</div>
+					<AboutSection />
 				</div>
 				
-				<div className="section expertise" ref={expertiseSection}>
-					<h3><TypewriterWhenVisible text="My Expertise" /></h3>
+				<div className="section skills" ref={skillsSection}>
+					<h3><TypewriterWhenVisible text="Skills" /></h3>
 
-					<div className="items">
-						<AnimateInWhenVisible delay={250}>
-							<div className="item">
-								<div className="header">
-									<div className="icon">
-										<img src={leaderIcon} alt="Leader" />
-									</div>
-									<div className="headline">
-										<h4><TypewriterWhenVisible text="Tech" delay={500} /></h4>
-									</div>
-								</div>
-								<p>
-									Experienced with leading technology development in growth stage companies, as well as getting heads down to get code done.
-								</p>
-								<p>
-									Tech is my passion, it's what I do in my free time, and I like delivering quality products that make people happy.
-								</p>
-							</div>
-						</AnimateInWhenVisible>
-
-						<AnimateInWhenVisible delay={500}>
-							<div className="item">
-								<div className="header">
-									<div className="icon">
-										<img src={skillsIcon} alt="Skills" />
-									</div>
-									<div className="headline">
-										<h4><TypewriterWhenVisible text="Skills" delay={750} /></h4>
-									</div>
-								</div>
-								<em className="note">
-									These are the skills I'm most proficient at. I'm open to all technologies and continually furthering my knowledge.
-								</em>
-								<ul>
-									<li>
-										<h5>React</h5>
-										<em>(This site developed in React)</em>
-										<a href="https://github.com/mrichhub/mikerichards.tech" target="_blank">See code on GitHub</a>
-									</li>
-									<li>
-										<h5>iOS</h5>
-										Swift, Obj-C
-									</li>
-									<li>
-										<h5>Node.js</h5>
-										Express, Socket.io
-									</li>
-									<li>
-										<h5>Typescript</h5>
-									</li>
-									<li>
-										<h5>C#</h5>
-									</li>
-									<li>
-										<h5>APIs</h5>
-										Protocols, data-handling, scalability
-									</li>
-									<li>
-										<h5>Web Sockets</h5>
-										Real-time data, scalability
-									</li>
-									<li>
-										<h5>Cloud</h5>
-										AWS, Azure
-									</li>
-									<li>
-										<h5>Web</h5>
-										React, Redux, Angular, etc.
-									</li>
-								</ul>
-							</div>
-						</AnimateInWhenVisible>
-
-						{/* <AnimateInWhenVisible delay={750}>
-							<div className="item">
-								<div className="header">
-									<div className="icon">
-										<img src={skillsIcon} alt="Skills" />
-									</div>
-									<div className="headline">
-										<h4><TypewriterWhenVisible text="Something Else" delay={1000} /></h4>
-									</div>
-								</div>
-							</div>
-						</AnimateInWhenVisible> */}
-					</div>
+					<SkillsSection />
 				</div>
 			
 				<div className="section work" ref={workSection}>
@@ -244,19 +126,7 @@ export default function PortfolioPage() {
 				<div className="section contact" ref={contactSection}>
 					<h3><TypewriterWhenVisible text="Contact" /></h3>
 
-					<AnimateInWhenVisible>
-						<div className="content">
-							<h4>Available for select opportunities</h4>
-
-							<p>
-								Do you need some tech help? Send me an email to contact me!
-							</p>
-
-							<div>
-								<a href="mailto: hi@mikerichards.tech">hi@mikerichards.tech</a>
-							</div>
-						</div>
-					</AnimateInWhenVisible>
+					<ContactSection />
 				</div>
 			</div>
 		</div>
@@ -266,7 +136,7 @@ export default function PortfolioPage() {
 		<div className={classNames("hamburger-menu", { "is-open": hamburgerMenuOpen })}>
 			<ul>
 				<li><a onClick={() => goToSection(aboutSection)}><Typewriter text="# About" delay={200} speed={20} /></a></li>
-				<li><a onClick={() => goToSection(expertiseSection)}><Typewriter text="# Expertise" delay={340} speed={20} /></a></li>
+				<li><a onClick={() => goToSection(skillsSection)}><Typewriter text="# Skills" delay={340} speed={20} /></a></li>
 				<li><a onClick={() => goToSection(workSection)}><Typewriter text="# Work" delay={560} speed={20} /></a></li>
 				<li><a onClick={() => goToSection(experienceSection)}><Typewriter text="# Experience" delay={680} speed={20} /></a></li>
 				<li><a onClick={() => goToSection(contactSection)}><Typewriter text="# Contact" delay={920} speed={20} /></a></li>
