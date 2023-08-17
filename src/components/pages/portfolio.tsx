@@ -91,7 +91,7 @@ export default function PortfolioPage() {
 				<div className="section main" ref={mainSection}>
 					<div className="headline">
 						<h1 className={classNames({ show: isPageLoaded, "intro-done": introDone })}>MIKE RICHARDS</h1>
-						<h2 className={classNames({ show: isPageLoaded, "intro-done": introDone })}>Full-Stack Engineer, Systems Architect, Startup Founder, Tech Enthusiast &amp; more...</h2>
+						<h2 className={classNames({ show: isPageLoaded, "intro-done": introDone })}>Full-Stack Engineer (iOS, Node, React, APIs, AWS, etc.) • Systems Architect • Startup Founder • Tech Enthusiast</h2>
 					</div>
 
 					<div className="scroll-for-more">
