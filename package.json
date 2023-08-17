@@ -7,7 +7,7 @@
     "build": "tsc && vite build",
     "cleardist": "rm -rf dist",
     "dev": "vite",
-    "deploy:prod": "aws s3 sync dist s3://mikerichards.tech/ --profile mike && aws cloudfront create-invalidation --distribution-id EV28W3WN5UN7X --profile mike --paths \"/\" \"/*\"",
+    "deploy:prod": "aws s3 sync dist s3://mikerichards.tech/ --profile mike && aws cloudfront create-invalidation --distribution-id E2KTDM8NC75TDW --profile mike --paths \"/\" \"/*\"",
     "deploy:v2": "aws s3 sync dist s3://v2.mikerichards.tech/ --profile mike && aws cloudfront create-invalidation --distribution-id E33KEN56JWVFDQ --profile mike --paths \"/\" \"/*\"",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prebuild": "npm run cleardist",
