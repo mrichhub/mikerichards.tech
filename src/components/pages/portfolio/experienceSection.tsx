@@ -100,7 +100,7 @@ export function ExperienceSection() {
 			<AnimateInWhenVisible delay={250}>
 				<div className={classNames("item", { selected: experienceSelected === Experience.att })} onClick={() => selectExperience(Experience.att)}>
 					<div className="header">
-						<div className="title"><h4>iOS & Windows Phone</h4></div>
+						<div className="title"><h4>Senior Developer</h4></div>
 						<div className="logo"><img src={attLogo} alt="AT&T Digital Life" /></div>
 					</div>
 
