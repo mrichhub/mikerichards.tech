@@ -20,12 +20,15 @@ export function SkillsSection() {
 						</div>
 						<ul>
 							<li>
-								<h5>iOS</h5>
-								Swift, Obj-C
+								<h5>Node.js</h5>
+								API, Socket.io, Express, etc.
 							</li>
 							<li>
-								<h5>Node.js</h5>
-								Express, Socket.io
+								<h5>Typescript</h5>
+							</li>
+							<li>
+								<h5>iOS</h5>
+								Swift, SwiftUI
 							</li>
 							<li>
 								<h5>React</h5>
@@ -33,17 +36,11 @@ export function SkillsSection() {
 								<a href="https://github.com/mrichhub/mikerichards.tech" target="_blank">See code on GitHub</a>
 							</li>
 							<li>
-								<h5>Typescript</h5>
-							</li>
-							<li>
-								<h5>C#</h5>
-							</li>
-							<li>
 								<h5>APIs</h5>
-								Protocols, data-handling, scalability
+								Protocols, scalability, security, etc.
 							</li>
 							<li>
-								<h5>Web Sockets</h5>
+								<h5>Sockets</h5>
 								Real-time data, scalability
 							</li>
 							<li>
@@ -56,7 +53,9 @@ export function SkillsSection() {
 							</li>
 						</ul>
 						<em className="note">
-							This is a snaptshot of the languages I'm currently most proficient at. I'm always open to all languages and continually furthering my knowledge.
+							This is a snaptshot of the skills that I'm currently the most proficient at. I've
+							experienced many languages and technologies, and I'm always open to all and continually
+							furthering my knowledge.
 						</em>
 					</div>
 				</AnimateInWhenVisible>
