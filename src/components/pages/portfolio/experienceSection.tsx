@@ -35,8 +35,9 @@ export function ExperienceSection() {
 					<div className="description">
 						<p>
 							Co-Found FanBeat and built tech from the ground up. Created a portfolio of games
-							that ranged from a live-action game capable of handling hundreds of thousands of simultaneous
-							users, to a daily fantasy game where users could make sports picks for a chance to win money.
+							that ranged from a live-action game capable of handling millions of simultaneous
+							requests, to a daily fantasy game where users could make sports picks for a
+							chance to win money.
 						</p>
 
 						<p>

@@ -35,7 +35,7 @@ export function WorkSection() {
 						sporting events, producing prediction-the-action and trivia questions to enhance the experience.
 						
 						<ul>
-							<li>Architected and developed backend infrastructure on AWS. Designed and load tested to handle hundreds of thousands of simultaneous connections across the US.</li>
+							<li>Architected and developed backend infrastructure on AWS. Designed and load tested to handle millions of simultaneous requests across the US.</li>
 							<li>Implemented a socket service to synchronize data on devices with low latency even over the same heavy volume.</li>
 							<li>Built iOS app using Swift. Heavy use of UIKit, async/await, and network communication.</li>
 							<li>Led development of web app, held stand-ups and organized sprint demos.</li>
