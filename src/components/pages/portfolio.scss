@@ -148,17 +148,42 @@ a {
 					}
 			
 					h2 {
-						font-size: 20px;
-						font-weight: 300;
+						font-size: 30px;
+						font-weight: 400;
 						margin: 0 auto;
 						max-width: 750px;
 						opacity: 0;
 						padding: 0 20px;
-						transform: translateY(50%);
 						transition: opacity 1s ease-in-out 0.5s, transform 1s ease-in-out 0.25s;
 	
 						@media screen and (max-width: 580px) {
-							font-size: max(3.45vw, 16px);
+							font-size: max(3.8vw, 24px);
+						}
+			
+						&.show {
+							opacity: max(min(calc(1 - (.5 * var(--scroll))), 1), 0);
+							// transform: scale(max(min(calc(1 - (.01 * var(--scroll) * 10)), 1), 0.5));
+						}
+	
+						&.intro-done {
+							transition: none;
+						}
+					}
+
+					h3 {
+						font-size: 20px;
+						font-style: italic;
+						font-weight: 300;
+						margin: 3px auto 0;
+						max-width: 750px;
+						min-height: unset;
+						opacity: 0;
+						padding: 0 20px;
+						transition: opacity 1s ease-in-out 0.5s, transform 1s ease-in-out 0.25s;
+
+						@media screen and (max-width: 580px) {
+							font-size: max(3.2vw, 16px);
+							margin-top: 8px;
 						}
 			
 						&.show {

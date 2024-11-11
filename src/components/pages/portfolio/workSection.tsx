@@ -59,7 +59,7 @@ export function WorkSection() {
 							<li>Led and organized product design. I strategized with business, searched for contract designers and html developers, and organized sprints for development.</li>
 							<li>Developed scalable API using Node.js and TypeScript on AWS infrastructure.</li>
 							<li>Implemented web app using React and TypeScript.</li>
-							<li>Integrated PayPal for deposits and withdrawals.</li>
+							<li>Integrated merchant aggregator service for deposits and withdrawals.</li>
 						</ul>
 					</div>
 				</div>
@@ -75,9 +75,9 @@ export function WorkSection() {
 					
 					<div className="description">
 						<ul>
-							<li>Worked on agile team of 2-3 iOS developers to create a MVP of the iOS app based on designs from the founder.</li>
-							<li>I owned the data handling; implementing structure and calls to the API and saving data to Core Data.</li>
-							<li>Implemented SnapChat's OAuth login.</li>
+							<li>Worked on an agile team of 2-3 software engineers to create an MVP of sendit’s starship iOS app.</li>
+							<li>Owned data architecture, implementing structure and bi-directional communication with the API.</li>
+							<li>Handled authentication using OAuth providers.</li>
 							<li>Worked on a number of visual elements that were heavy on animation using UIKit.</li>
 						</ul>
 					</div>

@@ -15,20 +15,23 @@ export function SkillsSection() {
 								<img src={softwareDevelopmentIcon} alt="Software Development" />
 							</div>
 							<div className="headline">
-								<h4><TypewriterWhenVisible text="Languages" delay={500} /></h4>
+								<h4><TypewriterWhenVisible text="Technologies" delay={500} /></h4>
 							</div>
 						</div>
+						<em className="note">
+							The following is a highlight of skills, but is not all-encompassing.
+						</em>
 						<ul>
 							<li>
 								<h5>Node.js</h5>
-								API, Socket.io, Express, etc.
+								API, SSE, Sockets, Express, etc.
 							</li>
 							<li>
-								<h5>Typescript</h5>
+								<h5>TypeScript/JavaScript</h5>
 							</li>
 							<li>
-								<h5>iOS</h5>
-								Swift, SwiftUI
+								<h5>Databases</h5>
+								MongoDB, PostgreSQL, Redis, etc.
 							</li>
 							<li>
 								<h5>React</h5>
@@ -45,18 +48,17 @@ export function SkillsSection() {
 							</li>
 							<li>
 								<h5>Cloud</h5>
-								AWS, Azure
+								AWS, GCP, Azure
 							</li>
 							<li>
 								<h5>Web</h5>
 								React, Redux, Angular, etc.
 							</li>
+							<li>
+								<h5>iOS</h5>
+								Swift, SwiftUI
+							</li>
 						</ul>
-						<em className="note">
-							This is a snaptshot of the skills that I'm currently the most proficient at. I've
-							experienced many languages and technologies, and I'm always open to all and continually
-							furthering my knowledge.
-						</em>
 					</div>
 				</AnimateInWhenVisible>
 
@@ -70,6 +72,12 @@ export function SkillsSection() {
 								<h4><TypewriterWhenVisible text="Roles" delay={750} /></h4>
 							</div>
 						</div>
+
+						<h5>Engineer</h5>
+						<p>
+							First and foremost, I describe myself as an engineer. I break down large challenges into manageable pieces, finding a path forward while
+							evaluating pros and cons of technologies and approaches. 
+						</p>
 						
 						<h5>Architect</h5>
 						<p>
