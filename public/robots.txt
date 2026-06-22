@@ -1,3 +1,4 @@
-# Allow All Bots
 User-agent: *
 Allow: /
+
+Sitemap: https://mikerichards.tech/sitemap.xml
