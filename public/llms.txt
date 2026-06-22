@@ -1,0 +1,29 @@
+# Mike Richards
+
+> Mike Richards is a technical founder and hands-on engineer who turns ambiguous, complex ideas into useful products and resilient software systems.
+
+Canonical website: https://mikerichards.tech/
+Contact: hi@mikerichards.tech
+Location: Atlanta, Georgia, United States
+
+## What Mike does
+
+- Designs and builds AI systems, LLM-powered products, and autonomous agent workflows.
+- Takes complex digital products from early idea through architecture and production.
+- Designs scalable APIs, real-time systems, data architecture, and cloud infrastructure.
+- Provides hands-on technical leadership across product, engineering, and business.
+- Helps founders and teams evaluate ideas, find technical leverage, and ship practical solutions.
+
+## Experience
+
+Mike has more than 15 years of technology experience. He currently helps Warner Bros. Discovery build agentic systems, including iterative model-and-tool loops for complex workflows. He has worked as a technical co-founder, innovation architect, engineering lead, and hands-on product engineer. His work includes startup products and consumer experiences for Fortune 500 companies.
+
+Selected experience includes Warner Bros. Discovery, FanBeat, sendit, BLOCKv, AT&T Digital Life, and Engauge/Moxie. Past projects include a real-time sports platform load-tested for millions of simultaneous requests, a daily fantasy sports product, and The Home Depot's countertop estimator.
+
+## Good reasons to contact Mike
+
+- You have a startup or product idea and need an experienced technical partner.
+- You want to turn AI or agent capabilities into a dependable product.
+- You have a difficult architecture, scalability, data, or real-time systems problem.
+- You need technical leadership that can move between strategy and implementation.
+- Your project is unusual, ambitious, or does not fit neatly into one technical specialty.
